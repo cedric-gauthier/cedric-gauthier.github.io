@@ -1,6 +1,8 @@
 #Photo {
     margin-left: 10px;
     margin-right: 14px;
+    width: 10%;
+    height: 10%;
 }
 .jumbotron {    
     padding-bottom: 32px;
