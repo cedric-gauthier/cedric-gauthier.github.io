@@ -1,32 +1,28 @@
 import { IconButton } from "./ui";
 import { cn } from "./ui/utils.ts";
 import { Lucide } from "./icons";
+import { FaSailboat } from "react-icons/fa6";
+import { GiFullMotorcycleHelmet } from "react-icons/gi";
 
 const projects = [
   {
-    title: "astrolinkt",
-    description: "Astro template",
-    icon: Lucide.IconImage,
+    title: "Nolark",
+    description: "Site web html/css",
+    icon: GiFullMotorcycleHelmet,
     url: "https://github.com/flamrdevs/astrolinkt",
   },
   {
-    title: "astrovehnt",
-    description: "Astro template",
-    icon: Lucide.IconImage,
+    title: "Navire",
+    description: "Application c#",
+    icon: FaSailboat,
     url: "https://github.com/flamrdevs/astrovehnt",
-  },
-  {
-    title: "astrobuckt",
-    description: "Astro template",
-    icon: Lucide.IconImage,
-    url: "https://github.com/flamrdevs/astrobuckt",
   },
 ];
 
 export default () => {
   return (
     <div>
-      <h2 className="font-medium text-xl mb-3">Projects</h2>
+      <h2 className="font-medium text-xl mb-3">Projets</h2>
       <ul className="grid grid-cols-1 gap-3 p-1">
         {projects.map((project) => {
           return (
