@@ -1,33 +1,37 @@
 ---
 import MainLayout from "~/layouts/MainLayout.astro";
-
 import { Separator } from "~/components/ui";
-
 import About from "~/components/About.tsx";
 import Projects from "~/components/Projects.tsx";
 import Stacks from "~/components/Stacks.tsx";
 import Socials from "~/components/Socials.tsx";
 import DevelopedBy from "~/components/DevelopedBy.tsx";
 ---
-
 <MainLayout>
-  <main class="container p-3 mx-auto max-w-screen-sm min-h-dvh">
+  <div class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center">
+    {/* Bouton de redirection */}
+    <a href="/" class="mx-2">
+      <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
+        Accueil
+      </button>
+    </a>
+    <a href="/veille" class="mx-2">
+      <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
+        Veille Technologique
+      </button>
+    </a>
+  </div>
+
+  <main class="container p-3 mx-auto max-w-screen-lg min-h-dvh" style="color: #333; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px;">
     <About client:idle />
-
     <Separator className="my-8" />
-
-    <Projects client:idle />
-
-    <div class="h-10"></div>
-
-    <Stacks client:idle />
-
-    <div class="h-10"></div>
-
     <Socials client:idle />
-
+    <div class="h-10"></div>
+    <Projects client:idle />
+    <div class="h-10"></div>
+    <Stacks client:idle />
+    <div class="h-10"></div>
     <Separator className="my-8" />
-
     <DevelopedBy />
   </main>
 </MainLayout>
@@ -37,20 +41,7 @@ import DevelopedBy from "~/components/DevelopedBy.tsx";
   body {
     z-index: 1;
     position: relative;
-    background-color: rgb(var(--neutral-1));
-    background-image: linear-gradient(rgb(var(--neutral-2)) 1px, transparent 1px),
-      linear-gradient(to right, rgb(var(--neutral-2)) 1px, rgb(var(--neutral-1)) 1px);
-    background-size: 40px 40px;
-  }
-
-  body::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, transparent, rgb(var(--neutral-1)));
+    background-color: #f9f9f9; /* Fond légèrement grisé */
+    color: #333; /* Texte noir */
   }
 </style>
