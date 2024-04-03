@@ -12,6 +12,6 @@ export default defineConfig({
     react(),
   ],
   buildOptions: {
-    dist: "public", // Spécifie le répertoire de sortie
+    dist: "public/artifact", // Spécifie le répertoire de sortie
   },
 });
