@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: public
+          path: public/artifact  # Spécifiez le dossier de l'artifact ici
 
   deploy:
     needs: build
@@ -44,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: public
+          path: public/artifact  # Spécifiez le même dossier ici
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
