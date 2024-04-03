@@ -1,13 +1,7 @@
 ---
 import MainLayout from "~/layouts/MainLayout.astro";
-import { Separator } from "~/components/ui";
-import About from "~/components/About.tsx";
-import Projects from "~/components/Projects.tsx";
-import Stacks from "~/components/Stacks.tsx";
-import Socials from "~/components/Socials.tsx";
-import ParcoursScolaire from "~/components/ParcoursScolaire.tsx";
-import DevelopedBy from "~/components/DevelopedBy.tsx";
 ---
+
 <MainLayout>
   <div class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center">
     {/* Bouton de redirection */}
@@ -24,21 +18,10 @@ import DevelopedBy from "~/components/DevelopedBy.tsx";
   </div>
 
   <main class="container p-3 mx-auto max-w-screen-lg min-h-dvh" style="color: #333; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px;">
-    <About client:idle />
-    <Separator className="my-7" />
-    <Socials client:idle />
-    <div class="h-6"></div>
-    <Separator className="my-7" />
-    <ParcoursScolaire client:idle />
-    <div class="h-6"></div>
-    <Separator className="my-7" />
-    <Projects client:idle />
-    <div class="h-10"></div>
-    <Separator className="my-7" />
-    <Stacks client:idle />
-    <div class="h-10"></div>
-    <Separator className="my-7" />
-    <DevelopedBy />
+    <h1 class="text-3xl font-bold mb-8 text-center">Veille Technologique</h1>
+    <div>
+      {/* Ajoutez ici le contenu de votre page de veille technologique */}
+    </div>
   </main>
 </MainLayout>
 

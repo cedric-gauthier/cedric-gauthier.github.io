@@ -1,89 +1,194 @@
-import { IconButton } from "./ui";
 import { cn } from "./ui/utils.ts";
-import { Lucide, Simple } from "./icons";
+import { Lucide } from "./icons";
 
+// Définir les données des différentes compétences avec leur niveau de compétence
 const stacks = [
   {
-    name: "Figma",
-    category: "Design",
-    icon: Simple.IconFigma,
-    url: "https://www.figma.com",
+    name: "HTML",
+    category: "Langage de balisage",
+    level: 90,
+    icon: "/html-5.png",
   },
   {
-    name: "Framer",
-    category: "Design",
-    icon: Simple.IconFramer,
-    url: "https://www.framer.com",
+    name: "CSS",
+    category: "Langage de style",
+    level: 80,
+    icon: "/css-3.png",
   },
   {
-    name: "Rive",
-    category: "Design",
-    icon: Simple.IconRive,
-    url: "https://rive.app",
+    name: "JavaScript",
+    category: "Langage de programmation",
+    level: 75,
+    icon: "/js.png", // Ajoutez le chemin de l'icône JavaScript
   },
   {
-    name: "Arc",
-    category: "Browser",
-    icon: Simple.IconArc,
-    url: "https://arc.net",
+    name: "C#",
+    category: "Langage de programmation",
+    level: 70,
+    icon: "/c.png", // Ajoutez le chemin de l'icône C#
   },
   {
-    name: "Notion",
-    category: "Productivity",
-    icon: Simple.IconNotion,
-    url: "https://www.notion.so",
+    name: "PHP",
+    category: "Langage de programmation",
+    level: 60,
+    icon: "/php.png", // Ajoutez le chemin de l'icône PHP
   },
   {
-    name: "Calendly",
-    category: "Calendar",
-    icon: Simple.IconCalendly,
-    url: "https://calendly.com",
+    name: "Python",
+    category: "Langage de programmation",
+    level: 85,
+    icon: "/python.png", // Ajoutez le chemin de l'icône Python
+  },
+  {
+    name: "Symfony",
+    category: "Framework PHP",
+    level: 65,
+    icon: "/symfony.png", // Ajoutez le chemin de l'icône Symfony
+  },
+  {
+    name: "Django",
+    category: "Framework Python",
+    level: 70,
+    icon: "/django.png", // Ajoutez le chemin de l'icône Django
+  },
+  {
+    name: "MySQL/MariaDB",
+    category: "Système de gestion de base de données",
+    level: 75,
+    icon: "/mysql.png", // Ajoutez le chemin de l'icône MySQL/MariaDB
+  },
+  {
+    name: "Oracle",
+    category: "Système de gestion de base de données",
+    level: 60,
+    icon: "/oracle.png", // Ajoutez le chemin de l'icône Oracle
   },
 ];
 
+const langages = stacks.filter(stack => stack.category === "Langage de programmation" || stack.category === "Langage de balisage" || stack.category === "Langage de style");
+const frameworks = stacks.filter(stack => stack.category.includes("Framework"));
+const databases = stacks.filter(stack => stack.category.includes("Système de gestion de base de données"));
+
+
+// Composant fonctionnel pour afficher les compétences avec des barres de compétences
 export default () => {
   return (
     <div className="max-w-3xl px-4">
-      <h2 className="font-medium text-xl mb-3">Compétences</h2>
-      <ul className="grid grid-cols-2 gap-3 p-1">
-        {stacks.map((stack) => {
-          return (
-            <li
-              key={stack.name}
-              className={cn(
-                "group",
-                "flex items-center justify-between px-4 py-3",
-                "bg-neutral-2 hover:bg-neutral-3",
-                "outline-none border border-neutral-4 hover:border-neutral-6 rounded-3xl",
-                "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-neutral-1"
-              )}
-            >
-              <div className="flex flex-row items-stretch gap-5 pl-2">
-                <div className="flex items-center justify-center">
-                  <stack.icon
-                    size={24}
-                    className="transition duration-300 group-hover:-translate-y-1 text-neutral-10 group-hover:text-neutral-11"
-                  />
-                </div>
-
-                <div>
-                  <h3 className="transition duration-300 group-hover:translate-x-1 text-neutral-12 text-sm">{stack.name}</h3>
-                  <div className="transition duration-300 group-hover:translate-x-px text-neutral-10 group-hover:text-neutral-11 text-xs">
-                    {stack.category}
+      <h2 className="font-medium text-xl mb-6 underline underline-offset-4">Compétences</h2>
+      {/* Section des langages */}
+      <div className="mb-6">
+        <h3 className="font-medium text-xl mb-3">Langages</h3>
+        <ul className="grid grid-cols-1 gap-3 p-1">
+          {/* Affichage des compétences de langage */}
+          {langages.map((stack, index) => (
+            <li key={index} className="flex items-center justify-between mb-3">
+              {/* Icône de compétence */}
+              <div className="flex items-center gap-3">
+                {stack.icon && (
+                  <div className="w-14 h-14 overflow-hidden">
+                    <img
+                      src={stack.icon}
+                      alt={stack.name}
+                      className="w-full h-full object-cover object-center"
+                    />
                   </div>
+                )}
+                <div>
+                  <h3 className="text-black">{stack.name}</h3> {/* Nom de compétence en noir */}
+                  <p className="text-sm text-neutral-7">{stack.category}</p>
                 </div>
               </div>
-
-              <IconButton as="a" role="button" href={stack.url} className="group/icon" target="_blank" aria-label="Open">
-                <Lucide.IconExternalLink
-                  aria-label="Open"
-                  className="transition text-neutral-10 group-hover:text-primary-11 group-focus-visible/icon:text-primary-11"
-                />
-              </IconButton>
+              {/* Barre de compétence */}
+              <div className="flex items-center gap-3">
+                <span className="text-black">{stack.level}%</span>
+                <div className="relative h-3 w-40 bg-neutral-4 rounded-full overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 h-full bg-primary-9 rounded-full"
+                    style={{ width: `${stack.level}%` }} // Ajustement de la largeur en fonction du niveau de compétence
+                  ></div>
+                </div>
+              </div>
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+      </div>
+
+      {/* Section des frameworks */}
+      <div className="mb-6">
+        <h2 className="font-medium text-xl mb-3">Frameworks</h2>
+        <ul className="grid grid-cols-1 gap-3 p-1">
+          {/* Affichage des compétences de framework */}
+          {frameworks.map((stack, index) => (
+            <li key={index} className="flex items-center justify-between mb-3">
+              {/* Icône de compétence */}
+              <div className="flex items-center gap-3">
+                {stack.icon && (
+                  <div className="w-14 h-14 overflow-hidden">
+                    <img
+                      src={stack.icon}
+                      alt={stack.name}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h3 className="text-black">{stack.name}</h3> {/* Nom de compétence en noir */}
+                  <p className="text-sm text-neutral-7">{stack.category}</p>
+                </div>
+              </div>
+              {/* Barre de compétence */}
+              <div className="flex items-center gap-3">
+                <span className="text-black">{stack.level}%</span>
+                <div className="relative h-3 w-40 bg-neutral-4 rounded-full overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 h-full bg-primary-9 rounded-full"
+                    style={{ width: `${stack.level}%` }} // Ajustement de la largeur en fonction du niveau de compétence
+                  ></div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Section des bases de données */}
+      <div>
+        <h2 className="font-medium text-xl mb-3">Bases de données</h2>
+        <ul className="grid grid-cols-1 gap-3 p-1">
+          {/* Affichage des compétences de base de données */}
+          {databases.map((stack, index) => (
+            <li key={index} className="flex items-center justify-between mb-3">
+              {/* Icône de compétence */}
+              <div className="flex items-center gap-3">
+                {stack.icon && (
+                  <div className="w-14 h-14 overflow-hidden">
+                    <img
+                      src={stack.icon}
+                      alt={stack.name}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h3 className="text-black">{stack.name}</h3> {/* Nom de compétence en noir */}
+                  <p className="text-sm text-neutral-7">{stack.category}</p>
+                </div>
+              </div>
+              {/* Barre de compétence */}
+              <div className="flex items-center gap-3">
+                <span className="text-black">{stack.level}%</span>
+                <div className="relative h-3 w-40 bg-neutral-4 rounded-full overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 h-full bg-primary-9 rounded-full"
+                    style={{ width: `${stack.level}%` }} // Ajustement de la largeur en fonction du niveau de compétence
+                  ></div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
+

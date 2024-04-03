@@ -1,7 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-
 import "~/styles/globals.ts";
+
 
 type Props = HTMLAttributes<"html"> & {
   title?: string;
@@ -19,7 +19,6 @@ const { title = "astrolinkt", description = title, ...html } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

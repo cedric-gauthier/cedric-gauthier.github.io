@@ -2,6 +2,7 @@ import { Simple } from "./icons";
 import { CiMail } from "react-icons/ci";
 import { cn } from "./ui/utils.ts";
 import { FaMusic, FaGamepad, FaMicrochip } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt } from 'react-icons/fa';
 
 const socials = [
   {
@@ -79,9 +80,9 @@ export default () => {
       </div>
 
       <div className="mt-3 mb-3">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum elit vitae elit imperdiet, quis porttitor nunc feugiat. Praesent lobortis interdum enim ac consectetur. Mauris lacinia felis quis felis bibendum, fermentum euismod est lobortis. Fusce ornare velit tristique ex lobortis venenatis. Maecenas dictum dolor ut eros faucibus interdum. Vestibulum faucibus metus est, in tincidunt lorem pellentesque quis. In tempus velit non elit egestas sollicitudin.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum elit vitae elit imperdiet, quis porttitor nunc feugiat. Praesent lobortis interdum enim ac consectetur. Mauris lacinia felis quis felis bibendum, fermentum euismod est lobortis. Fusce ornare velit tristique ex lobortis venenatis. Maecenas dictum dolor ut eros faucibus interdum. Vestibulum faucibus metus est, in tincidunt lorem pellentesque quis. In tempus velit non elit egestas sollicitudin.
       </div >
-      <h2 className="font-medium text-xl">Passions</h2>
+      <h2 className="font-medium text-xl ml-1 underline underline-offset-4">Passions</h2>
       {/* Ajout des cercles pour les passions avec les icônes */}
       <div className="flex justify-center gap-4">
         {/* Cercle pour la musique */}
@@ -99,6 +100,8 @@ export default () => {
           <FaMicrochip className="text-2xl text-neutral-6" />
         </div>
       </div>
+
+
     </div>
   );
 };
