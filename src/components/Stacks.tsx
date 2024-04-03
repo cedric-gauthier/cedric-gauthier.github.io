@@ -6,61 +6,61 @@ const stacks = [
     name: "HTML",
     category: "Langage de balisage",
     level: 90,
-    icon: "/html-5.png",
+    icon: "/img/html-5.png",
   },
   {
     name: "CSS",
     category: "Langage de style",
     level: 80,
-    icon: "/css-3.png",
+    icon: "/img/css-3.png",
   },
   {
     name: "JavaScript",
     category: "Langage de programmation",
     level: 75,
-    icon: "/js.png", // Ajoutez le chemin de l'icône JavaScript
+    icon: "/img/js.png", // Ajoutez le chemin de l'icône JavaScript
   },
   {
     name: "C#",
     category: "Langage de programmation",
     level: 70,
-    icon: "/c.png", // Ajoutez le chemin de l'icône C#
+    icon: "/img/c.png", // Ajoutez le chemin de l'icône C#
   },
   {
     name: "PHP",
     category: "Langage de programmation",
     level: 60,
-    icon: "/php.png", // Ajoutez le chemin de l'icône PHP
+    icon: "/img/php.png", // Ajoutez le chemin de l'icône PHP
   },
   {
     name: "Python",
     category: "Langage de programmation",
     level: 85,
-    icon: "/python.png", // Ajoutez le chemin de l'icône Python
+    icon: "/img/python.png", // Ajoutez le chemin de l'icône Python
   },
   {
     name: "Symfony",
     category: "Framework PHP",
     level: 65,
-    icon: "/symfony.png", // Ajoutez le chemin de l'icône Symfony
+    icon: "/img/symfony.png", // Ajoutez le chemin de l'icône Symfony
   },
   {
     name: "Django",
     category: "Framework Python",
     level: 70,
-    icon: "/django.png", // Ajoutez le chemin de l'icône Django
+    icon: "/img/django.png", // Ajoutez le chemin de l'icône Django
   },
   {
     name: "MySQL/MariaDB",
     category: "Système de gestion de base de données",
     level: 75,
-    icon: "/mysql.png", // Ajoutez le chemin de l'icône MySQL/MariaDB
+    icon: "/img/mysql.png", // Ajoutez le chemin de l'icône MySQL/MariaDB
   },
   {
     name: "Oracle",
     category: "Système de gestion de base de données",
     level: 60,
-    icon: "/oracle.png", // Ajoutez le chemin de l'icône Oracle
+    icon: "/img/oracle.png", // Ajoutez le chemin de l'icône Oracle
   },
 ];
 

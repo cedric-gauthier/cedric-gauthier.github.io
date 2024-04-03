@@ -38,7 +38,7 @@ export default () => {
             }}
           >
             <img
-              src="/pdp.png"
+              src="/img/pdp.png"
               alt="profile"
               className="w-full h-full object-cover"
             />
