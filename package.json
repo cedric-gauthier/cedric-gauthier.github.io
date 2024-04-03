@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": {
-    "name": "flamrdevs",
-    "url": "https://github.com/flamrdevs"
+    "name": "cedric-gauthier",
+    "url": "https://github.com/cedric-gauthier"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/flamrdevs/astrolinkt.git"
+    "url": "https://github.com/cedric-gauthier/cedric-gauthier.github.io"
   },
   "scripts": {
     "dev": "astro dev",
