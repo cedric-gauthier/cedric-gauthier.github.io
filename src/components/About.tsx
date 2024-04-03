@@ -1,8 +1,6 @@
 import { Simple } from "./icons";
-import { CiMail } from "react-icons/ci";
 import { cn } from "./ui/utils.ts";
 import { FaMusic, FaGamepad, FaMicrochip } from "react-icons/fa";
-import { FaHtml5, FaCss3Alt } from 'react-icons/fa';
 
 const socials = [
   {

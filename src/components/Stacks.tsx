@@ -1,5 +1,4 @@
-import { cn } from "./ui/utils.ts";
-import { Lucide } from "./icons";
+
 
 // Définir les données des différentes compétences avec leur niveau de compétence
 const stacks = [
