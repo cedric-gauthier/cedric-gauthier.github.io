@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: 'www.gauthiercedric.fr',
+  site: 'https://cedric-gauthier.github.io',
   integrations: [
     tailwind({
       applyBaseStyles: false,
