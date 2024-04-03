@@ -23,8 +23,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
-            package-manager: pnpm # Spécifiez pnpm comme gestionnaire de paquets
-            version: 8.15.5 # Spécifiez la version de pnpm à utiliser
+            package-manager: pnpm
 
   deploy:
     needs: build
