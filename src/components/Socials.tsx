@@ -15,7 +15,7 @@ const ExperienceTimeline = () => {
       title: "Stage n°1 développement web",
       company: "Etudes et solutions",
       date: "Mai 2023 - Juin 2023",
-      description: "Application sous framework Django Python. Solution de récolte de données écologique et intelligente.",
+      description: "Application sous framework Django Python.",
       description2: "Solution de récolte de données écologique et intelligente."
     },
   ];
