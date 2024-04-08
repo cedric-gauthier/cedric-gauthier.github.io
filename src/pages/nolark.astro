@@ -4,76 +4,110 @@ const title = "Projet Nolark";
 ---
 
 <MainLayout title={title}>
-    <div class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center">
-      {/* Bouton de redirection */}
-      <a href="/" class="mx-2">
-        <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
-          Accueil
-        </button>
-      </a>
-      <a href="/veille" class="mx-2">
-        <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
-          Veille Technologique
-        </button>
-      </a>
+  <div
+    class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center"
+  >
+    {/* Bouton de redirection */}
+    <a href="/" class="mx-2">
+      <button
+        class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+      >
+        Accueil
+      </button>
+    </a>
+    <a href="/veille" class="mx-2">
+      <button
+        class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+      >
+        Veille Technologique
+      </button>
+    </a>
+  </div>
+  <div class="container pl-5 pr-5 mx-auto max-w-screen-lg min-h-screen">
+    <div class="flex justify-center">
+      <div class="w-2/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg">
+        <h1 class="text-3xl font-bold text-center">{title}</h1>
+      </div>
     </div>
-    <div class="container p-3 mx-auto max-w-screen-lg min-h-dvh">
-      <h1 class="text-3xl font-bold mb-4 text-center">{title}</h1>
-      
-      {/* Carrousel */}
-      
-      <div class="flex items-center gap-4 mt-4">
-        <h2 class="text-xl font-semibold mb-2">Objectifs :</h2>
-      </div>
-      <div>
-        <p class="text-gray-700">Initiation au HTML / CSS</p>
-      </div>
-      <div>
-        <p class="text-gray-700">Initiation au JavaScript</p>
-      </div>
-      <div>
-        <img src="/img/Nolark_accueil.jpg" class="mt-8 mb-4 mx-auto"></img>
-        <p class="text-lg mx-auto mt-2 text-justify">
-            Sed dapibus scelerisque purus. Integer rutrum feugiat felis, et
-            pellentesque nisi efficitur eget. Proin id enim lectus. Duis non
-            convallis dolor. Vestibulum id erat tincidunt, consectetur felis
-            nec, ultricies sem. Proin rhoncus velit id libero scelerisque
-            vestibulum. Phasellus tincidunt lacus ac eros venenatis, sit amet
-            mattis ligula commodo. Integer scelerisque vehicula ex, sit amet
-            elementum urna ultrices ut. Aliquam tincidunt leo velit, a
-            pellentesque ex feugiat at. Fusce auctor turpis a dolor facilisis,
-            nec aliquam velit gravida.
-          </p>
-      </div>
-      <p class="text-lg mx-auto mt-2 text-justify">
-        Nam sed nisl id mi volutpat volutpat. Phasellus in lectus ultricies,
-        ultrices justo sit amet, lacinia mauris. Nullam scelerisque lectus a
-        libero accumsan condimentum. Ut laoreet lectus non odio suscipit,
-        non faucibus tellus viverra. Nullam at ex sit amet augue
-        sollicitudin tristique. Nullam sollicitudin sed lorem quis
-        vestibulum. Cras et purus tincidunt, consectetur nunc vel, gravida
-        quam. Vestibulum fermentum ipsum a orci egestas, id ultrices libero
-        fermentum. Donec condimentum libero a dui suscipit tempus. Aliquam
-        dapibus bibendum mauris vitae ultricies.
-      </p>
-    </div>
-  
-    <style>
-      .container {
-    color: #333;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-      /* boxes pattern */
-      body {
-        z-index: 1;
-        position: relative;
-        background-color: #f9f9f9 !important; /* Fond légèrement grisé */
-        color: #333; /* Texte noir */
-      }
-    </style>
-  </MainLayout>
+    {/* Carrousel */}
 
+    {/* Objectifs Box */}
+    <div class="bg-accent-1 p-4 mt-8 rounded-3xl shadow-lg">
+      <div>
+        <div class="flex items-center gap-4">
+          <h2 class="text-xl font-semibold">Objectifs :</h2>
+        </div>
+        <div>
+          <p class="text-gray-700">Initiation au HTML / CSS</p>
+        </div>
+        <div>
+          <p class="text-gray-700">Initiation au JavaScript</p>
+        </div>
+      </div>
+      <div class="mt-5">
+        <h2 class="text-xl font-semibold">Compétences mises en oeuvre :</h2>
+        <div class="flex overflow-x-auto mt-6 gap-4">
+          <div>
+            <img src="/img/html-5.png" class="w-14 h-14 rounded-lg" />
+            <p>HTML</p>
+          </div>
+          <div>
+            <img src="/img/css-3.png" class="w-14 h-14 rounded-lg" />
+            <p>CSS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+    >
+      <div>
+        <img
+          src="/img/Nolark_accueil.jpg"
+          class="mt-8 mb-4 mx-auto"
+          alt="Accueil"
+        />
+        <p class="text-lg text-center mt-2">
+          Page d'accueil du site <br />Première navbar
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+    >
+      <div>
+        <img src="/img/iframe.png" class="mt-8 mb-4 mx-auto" />
+        <p class="text-lg text-center mt-2">Première intégration d'un iframe</p>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+    >
+      <div>
+        <img src="/img/nous-cotacter-768x792.png" class="mt-8 mb-4 mx-auto" />
+        <p class="text-lg text-center mt-2">
+          Premier formulaire <br />Première utilisation d'une api via
+          mapquestapi.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      color: #333;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* boxes pattern */
+    body {
+      z-index: 1;
+      position: relative;
+      background-color: #f9f9f9 !important; /* Fond légèrement grisé */
+      color: #333; /* Texte noir */
+    }
+  </style>
+</MainLayout>

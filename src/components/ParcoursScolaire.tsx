@@ -11,7 +11,7 @@ const ExperienceTimeline = () => {
     },
     {
       id: 2,
-      title: "Licence informatique",
+      title: "Licence 1 informatique",
       company: "L1 Option informatique",
       date: "Université de La Garde",
       description: "2021 - 2022",
@@ -19,8 +19,8 @@ const ExperienceTimeline = () => {
     {
       id: 3,
       title: "Baccaulauréat Scientifique",
-      company: "",
-      date: "Lycée Bonaparte",
+      company: "Option ISN",
+      date: "Candidat libre",
       description: "2020",
     },
   ];

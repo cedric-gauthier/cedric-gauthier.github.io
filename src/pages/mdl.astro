@@ -1,0 +1,156 @@
+---
+import MainLayout from "~/layouts/MainLayout.astro";
+const title = "MDL";
+---
+
+<MainLayout title={title}>
+    <div
+        class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center"
+    >
+        {/* Bouton de redirection */}
+        <a href="/" class="mx-2">
+            <button
+                class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+            >
+                Accueil
+            </button>
+        </a>
+        <a href="/veille" class="mx-2">
+            <button
+                class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+            >
+                Veille Technologique
+            </button>
+        </a>
+    </div>
+    <div class="container pl-5 pr-5 mx-auto max-w-screen-lg min-h-screen">
+        <div class="flex justify-center">
+            <div class="w-2/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg">
+                <h1 class="text-3xl font-bold text-center">{title}</h1>
+            </div>
+        </div>
+        {/* Carrousel */}
+
+        {/* Objectifs Box */}
+        <div class="bg-accent-1 p-4 mt-8 rounded-3xl shadow-lg">
+            <div>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-xl font-semibold">Objectifs :</h2>
+                </div>
+                <div>
+                    <p class="text-gray-700">
+                        Renforcement des compétences Symfony
+                    </p>
+                </div>
+                <div>
+                    <p class="text-gray-700">Mettre un projet en production</p>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h2 class="text-xl font-semibold">
+                    Compétences mises en oeuvre :
+                </h2>
+                <div class="flex overflow-x-auto mt-6 gap-4">
+                    <div class="flex overflow-x-auto mt-4 gap-4">
+                        <div class="mr-5">
+                            <img
+                                src="/img/php.png"
+                                class="w-14 h-14 rounded-lg"
+                            />
+                            <p class="ml-2">PHP</p>
+                        </div>
+                        <div class="mr-5">
+                            <img
+                                src="/img/symfony.png"
+                                class="w-14 h-14 rounded-lg"
+                            />
+                            <p class="">Symfony</p>
+                        </div>
+                        <div class="mr-5">
+                            <img
+                                src="/img/git.png"
+                                class="w-14 h-14 rounded-lg"
+                            />
+                            <p class="ml-4">git</p>
+                        </div>
+                        <div class="mr-5">
+                            <img
+                                src="/img/html-5.png"
+                                class="w-14 h-14 rounded-lg"
+                            />
+                            <p class="ml-2">HTML</p>
+                        </div>
+                        <div class="mr-5">
+                            <img
+                                src="/img/css-3.png"
+                                class="w-14 h-14 rounded-lg"
+                            />
+                            <p class="ml-3">CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img
+                    src="/img/accueilmdl.png"
+                    class="mt-8 mb-4 mx-auto"
+                    alt="Accueil"
+                />
+                <p class="text-lg text-center mt-2">Page d'accueil du projet</p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img src="/img/inscriptionmdl.png" class="mt-8 mb-4 mx-auto" />
+                <p class="text-lg text-center mt-2">
+                    Inscription d'un licencié
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img src="/img/creationmdl.png" class="mt-8 mb-4 mx-auto" />
+                <p class="text-lg text-center mt-2">
+                    Page de création des ateliers, thèmes et vacations
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img
+                    src="/img/inscriptioncongresmdl.png"
+                    class="mt-8 mb-4 mx-auto"
+                />
+                <p class="text-lg text-center mt-2">Inscription au congrès</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .container {
+            color: #333;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* boxes pattern */
+        body {
+            z-index: 1;
+            position: relative;
+            background-color: #f9f9f9 !important; /* Fond légèrement grisé */
+            color: #333; /* Texte noir */
+        }
+    </style>
+</MainLayout>

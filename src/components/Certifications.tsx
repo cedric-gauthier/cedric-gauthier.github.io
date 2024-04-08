@@ -1,9 +1,6 @@
 import { Lucide } from "./icons";
-import { AiFillCode } from "react-icons/ai";
-import { FaFolderOpen } from "react-icons/fa";
+import { FaSailboat } from "react-icons/fa6";
 import { GiFullMotorcycleHelmet } from "react-icons/gi";
-import { GiSwordClash } from "react-icons/gi";
-import { BiSolidVial } from "react-icons/bi";
 
 const projects = [
   {
@@ -15,31 +12,31 @@ const projects = [
   {
     title: "C#",
     description: "TP C#",
-    icon: AiFillCode,
+    icon: FaSailboat,
     url: "/c",
   },
   {
     title: "Alfred Solution 1",
     description: "Projet stage 1ère année",
-    icon: FaFolderOpen,
+    icon: FaSailboat,
     url: "/alfred1",
   },
   {
     title: "Alfred Solution 2",
     description: "Projet stage 2ème année",
-    icon: FaFolderOpen,
+    icon: FaSailboat,
     url: "/alfred2",
   },
   {
     title: "GSB",
     description: "Application de gestion de frais",
-    icon: BiSolidVial,
+    icon: FaSailboat,
     url: "/gsb",
   },
   {
     title: "Maison des ligues",
-    description: "Application de gestion de congrès",
-    icon: GiSwordClash,
+    description: "Application de gestion de frais",
+    icon: FaSailboat,
     url: "/mdl",
   },
 ];

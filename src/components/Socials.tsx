@@ -6,15 +6,17 @@ const ExperienceTimeline = () => {
       id: 1,
       title: "Stage n°2 développement web",
       company: "Etudes et solutions",
-      date: "Février 2024 - Mars 2024",
-      description: "Application web sous framework Django Python. Refonte et amélioration de la solution.",
+      date: "Janvier 2024 - Mars 2024",
+      description: "Application sous framework Django Python.",
+      description2: "Refonte et amélioration de la solution."
     },
     {
       id: 2,
       title: "Stage n°1 développement web",
       company: "Etudes et solutions",
       date: "Mai 2023 - Juin 2023",
-      description: "Application web sous framework Django Python. Solution de récolte de données.",
+      description: "Application sous framework Django Python. Solution de récolte de données écologique et intelligente.",
+      description2: "Solution de récolte de données écologique et intelligente."
     },
   ];
 
@@ -33,8 +35,9 @@ const ExperienceTimeline = () => {
               </div>
               <div className="ml-4">
                 <h3 className="font-semibold">{experience.title}</h3>
-                <p className="text-gray-700 mt-1">{experience.description}</p>
-                <p className="text-gray-600 mt-1">{experience.company}</p>
+                <p className="text-gray-700 mt-2">{experience.description}</p>
+                <p className="text-gray-700">{experience.description2}</p>
+                <p className="text-gray-600 mt-2">{experience.company}</p>
                 <p className="text-sm text-gray-500 mt-1 italic">{experience.date}</p>
               </div>
             </div>

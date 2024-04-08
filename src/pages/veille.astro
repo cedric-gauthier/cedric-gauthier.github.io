@@ -1,37 +1,92 @@
 ---
 import MainLayout from "~/layouts/MainLayout.astro";
+const title = "Veille Technologique";
 ---
 
-<MainLayout>
-  <div class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center">
+<MainLayout title={title}>
+  <div
+    class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center"
+  >
     {/* Bouton de redirection */}
     <a href="/" class="mx-2">
-      <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
+      <button
+        class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+      >
         Accueil
       </button>
     </a>
     <a href="/veille" class="mx-2">
-      <button class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9">
+      <button
+        class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+      >
         Veille Technologique
       </button>
     </a>
   </div>
-
-  <main class="container p-3 mx-auto max-w-screen-lg min-h-dvh" style="color: #333; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px;">
-    <h1 class="text-3xl font-bold mb-8 text-center">Veille Technologique</h1>
-    <div>
-      {/* Ajoutez ici le contenu de votre page de veille technologique */}
+  <div class="container pl-5 pr-5 mx-auto max-w-screen-lg min-h-screen">
+    <div class="flex justify-center">
+      <div class="w-2/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg">
+        <h1 class="text-3xl font-bold text-center">{title}</h1>
+      </div>
     </div>
-  </main>
+    {/* Carrousel */}
+
+    {/* Objectifs Box */}
+    <div class="bg-accent-1 p-4 mt-8 rounded-3xl shadow-lg">
+      <div>
+        <div class="text-xl font-semibold mt-8 mb-4 ml-48">
+          <p class="text-gray-700">Je réalise ma veille technologique via les moyens suivants :</p>
+        </div>
+      </div> 
+      
+    </div>
+    <div class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg">
+      <div>
+        <img
+          src="/img/veilledaily.png"
+          class="mt-8 mb-4 mx-auto"
+          alt="Accueil"
+        />
+        <p class="text-lg font-semibold text-center mt-2">Daily.dev</p><p class="text-lg text-center">Remplace la page d'accueil du navigateur web</p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg">
+      <div>
+        <img
+          src="/img/veilletwitter.png"
+          class="mt-8 mb-4 mx-auto"
+          alt="Accueil"
+        />
+        <p class="text-lg font-semibold text-center mt-2">Twitter</p><p class="text-lg text-center">Liste communautaire de dev</p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg">
+      <div>
+        <img
+          src="/img/veilleyoutube.png"
+          class="mt-8 mb-4 mx-auto"
+          alt="Accueil"
+        />
+        <p class="text-lg font-semibold text-center mt-2">Youtube</p><p class="text-lg text-center">Chaîne youtube de l'émission Underscore_</p>
+      </div>
+    </div>
+  </div>
+
   <style>
+    .container {
+      color: #333;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
     /* boxes pattern */
     body {
-          z-index: 1;
-          position: relative;
-          background-color: #f9f9f9 !important; /* Fond légèrement grisé */
-          color: #333; /* Texte noir */
-        }
+      z-index: 1;
+      position: relative;
+      background-color: #f9f9f9 !important; /* Fond légèrement grisé */
+      color: #333; /* Texte noir */
+    }
   </style>
 </MainLayout>
-
-

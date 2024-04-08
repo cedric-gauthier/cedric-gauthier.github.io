@@ -15,9 +15,15 @@ const stacks = [
     icon: "/img/css-3.png",
   },
   {
-    name: "JavaScript",
+    name: "PHP",
     category: "Langage de programmation",
     level: 75,
+    icon: "/img/php.png", // Ajoutez le chemin de l'icône PHP
+  },
+  {
+    name: "JavaScript",
+    category: "Langage de programmation",
+    level: 50,
     icon: "/img/js.png", // Ajoutez le chemin de l'icône JavaScript
   },
   {
@@ -25,12 +31,6 @@ const stacks = [
     category: "Langage de programmation",
     level: 70,
     icon: "/img/c.png", // Ajoutez le chemin de l'icône C#
-  },
-  {
-    name: "PHP",
-    category: "Langage de programmation",
-    level: 60,
-    icon: "/img/php.png", // Ajoutez le chemin de l'icône PHP
   },
   {
     name: "Python",

@@ -4,25 +4,11 @@ import { FaMusic, FaGamepad, FaMicrochip } from "react-icons/fa";
 
 const socials = [
   {
-    href: "https://github.com",
+    href: "https://github.com/cedric-gauthier",
     name: "GitHub",
     icon: Simple.IconGitHub,
     bgColor: "var(--neutral-2)", // Couleur de fond pour GitHub
     iconColor: "text-primary-9" // Couleur de l'icône pour GitHub
-  },
-  {
-    href: "https://x.com",
-    name: "X",
-    icon: Simple.IconX,
-    bgColor: "var(--neutral-3)", // Couleur de fond pour X
-    iconColor: "text-primary-9" // Couleur de l'icône pour X
-  },
-  {
-    href: "https://www.youtube.com",
-    name: "Youtube",
-    icon: Simple.IconYoutube,
-    bgColor: "var(--accent-1)", // Couleur de fond pour Youtube
-    iconColor: "text-primary-9" // Couleur de l'icône pour Youtube
   },
 ];
 
@@ -77,17 +63,15 @@ export default () => {
         </ul>
       </div>
 
-      <div className="mt-3 mb-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum elit vitae elit imperdiet, quis porttitor nunc feugiat. Praesent lobortis interdum enim ac consectetur. Mauris lacinia felis quis felis bibendum, fermentum euismod est lobortis. Fusce ornare velit tristique ex lobortis venenatis. Maecenas dictum dolor ut eros faucibus interdum. Vestibulum faucibus metus est, in tincidunt lorem pellentesque quis. In tempus velit non elit egestas sollicitudin.
+      <div className="mt-3">
+        <p>23 ans.<br />
+          Actuellement en 2nde année de BTS SIO, je souhaite poursuivre mes études dans le développement web.<br />
+          Je souhaiterai également gagner en compétences au niveau cybersécurité / réseau.
+        </p>
       </div >
       <h2 className="font-medium text-xl ml-1 underline underline-offset-4">Passions</h2>
       {/* Ajout des cercles pour les passions avec les icônes */}
       <div className="flex justify-center gap-4">
-        {/* Cercle pour la musique */}
-        <div className="w-16 h-16 bg-accent-1 flex items-center justify-center rounded-full shadow-lg">
-          <FaMusic className="text-2xl text-neutral-6" />
-        </div>
-
         {/* Cercle pour les jeux vidéo */}
         <div className="w-16 h-16 bg-accent-1 flex items-center justify-center rounded-full shadow-lg">
           <FaGamepad className="text-2xl text-neutral-6" />
@@ -97,9 +81,17 @@ export default () => {
         <div className="w-16 h-16 bg-accent-1 flex items-center justify-center rounded-full shadow-lg">
           <FaMicrochip className="text-2xl text-neutral-6" />
         </div>
+
+        {/* Cercle pour la musique */}
+        <div className="w-16 h-16 bg-accent-1 flex items-center justify-center rounded-full shadow-lg">
+          <FaMusic className="text-2xl text-neutral-6" />
+        </div>
       </div>
-
-
+      <div className="mt-4 text-xl font-medium">
+          <a href="/img/CV_Cedric_GAUTHIER.pdf" target="_blank" rel="noopener noreferrer">
+            <button>Voir mon CV</button>
+          </a>
+        </div>
     </div>
   );
 };

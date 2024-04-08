@@ -1,0 +1,143 @@
+---
+import MainLayout from "~/layouts/MainLayout.astro";
+const title = "Alfred Solution 1";
+---
+
+<MainLayout title={title}>
+    <div
+        class="fixed top-0 right-7 z-10 w-1/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg flex justify-center"
+    >
+        {/* Bouton de redirection */}
+        <a href="/" class="mx-2">
+            <button
+                class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+            >
+                Accueil
+            </button>
+        </a>
+        <a href="/veille" class="mx-2">
+            <button
+                class="px-4 py-2 rounded-full bg-accent-1 text-neutral-6 hover:text-primary-9"
+            >
+                Veille Technologique
+            </button>
+        </a>
+    </div>
+    <div class="container pl-5 pr-5 mx-auto max-w-screen-lg min-h-screen">
+        <div class="flex justify-center">
+            <div class="w-2/5 bg-accent-1 p-4 rounded-b-3xl shadow-lg">
+                <h1 class="text-3xl font-bold text-center">{title}</h1>
+            </div>
+        </div>
+        {/* Carrousel */}
+
+        {/* Objectifs Box */}
+        <div class="bg-accent-1 p-4 mt-8 rounded-3xl shadow-lg">
+            <div>
+                <div class="flex items-center gap-4">
+                    <h2 class="text-xl font-semibold">Objectifs :</h2>
+                </div>
+                <div>
+                    <p class="text-gray-700">
+                        Apprentissage du framework Django
+                    </p>
+                </div>
+                <div>
+                    <p class="text-gray-700">
+                        Renforcement des compténces python
+                    </p>
+                </div>
+                <div>
+                    <p class="text-gray-700">Apprentissage architecture MVC</p>
+                </div>
+                <div>
+                    <p class="text-gray-700">Répondre à un cahier des charge</p>
+                </div>
+                <div>
+                    <p class="text-gray-700">Travailler en équipe</p>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h2 class="text-xl font-semibold">
+                    Compétences mises en oeuvre :
+                </h2>
+                <div class="flex overflow-x-auto mt-6 gap-4">
+                    <div>
+                        <img
+                            src="/img/django.png"
+                            class="w-14 h-14 rounded-lg"
+                        />
+                        <p>django</p>
+                    </div>
+                    <div>
+                        <img
+                            src="/img/python.png"
+                            class="w-14 h-14 rounded-lg"
+                        />
+                        <p>python</p>
+                    </div>
+                    <div>
+                        <img
+                            src="/img/sqlite.webp"
+                            class="w-14 h-14 rounded-lg"
+                        />
+                        <p>sqlite3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img
+                    src="/img/asaccueil.jpg"
+                    class="mt-8 mb-4 mx-auto"
+                    alt="Accueil"
+                />
+                <p class="text-lg text-center mt-2">
+                    Page d'accueil du site <br />Affichage du nombre via les
+                    models
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img src="/img/tableexcel.jpg" class="mt-8 mb-4 mx-auto" />
+                <p class="text-lg text-center mt-2">
+                    Fonction d'export de table de base de donées vers excel
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center mb-20 mt-6 pr-4 pl-4 pb-4 rounded-3xl shadow-lg"
+        >
+            <div>
+                <img src="/img/licence.jpg" class="mt-8 mb-4 mx-auto" />
+                <p class="text-lg text-center mt-2">
+                    Instauration d'un système de licence
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .container {
+            color: #333;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* boxes pattern */
+        body {
+            z-index: 1;
+            position: relative;
+            background-color: #f9f9f9 !important; /* Fond légèrement grisé */
+            color: #333; /* Texte noir */
+        }
+    </style>
+</MainLayout>
